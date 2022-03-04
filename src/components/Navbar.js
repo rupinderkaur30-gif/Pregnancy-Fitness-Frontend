@@ -1,8 +1,32 @@
-export default function Navbar({setPage}) {
-    return <div>
-        <button onClick={e => setPage("Home")}>Home</button>
-        <button onClick={e => setPage("AllWorkouts")}>AllWorkouts</button>
-        <button onClick={e => setPage("Mealplan")} >MealPlan</button>
-        <button onClick={e => setPage("Fitnessplanner")}>FitnessPlanner</button>
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { logoutUser } from '../redux/actions/userAction.js'
+const  Navbar = (props) => {
+
+  const logout = () => {
+    props.logoutUser()
+  }
+    return <div className="header">
+    <NavLink className='headerlink' to="/home">Home</NavLink>
+    {!props.loggedIn && <NavLink className='headerlink' to="/login">Log In</NavLink>}
+    <NavLink className='headerlink' to="/allworkouts">AllWorkouts</NavLink>
+    <NavLink className='headerlink' to="/mealplan">Mealplan</NavLink>
+    <NavLink className='headerlink' to="/fitnessplanner">Fitnessplanner</NavLink>
+    {props.loggedIn && <NavLink onClick={logout} className='headerlink' to="#">Log Out</NavLink>}
     </div>;
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logoutUser: () => dispatch(logoutUser())
+  }
+}
+const mapStateToProps = (state) => {
+   return {
+     loggedIn: state.userReducer.loggedIn
+   }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
