@@ -5,7 +5,8 @@ import {BrowserRouter as Router, Route , Switch, withRouter} from "react-router-
 import React, { Component} from 'react';
 import Navbar from './components/Navbar'
 import Home from './components/home/Home';
-import AllWorkouts from './components/allworkouts/AllWorkouts';
+import AllWorkout from './components/allworkouts/AllWorkout';
+import WorkoutShow from './components/allworkouts/WorkoutShow';
 import Mealplan from './components/mealplan/Mealplan';
 import Fitnessplanner from './components/fitnessplanner/Fitnessplanner';
 import LogIn from './components/login/LogIn';
@@ -24,7 +25,8 @@ class App extends Component{
     <Switch>
       <Route path="/home" component={Home} />
       <Route path="/login" component={LogIn} />
-      <Route path="/allworkouts" component={AllWorkouts} />
+      <Route path="/allworkouts" component={AllWorkout} />
+      <Route path="/workouts/:id" component={WorkoutShow} />
       <Route path="/mealplan" component={Mealplan} />
       <Route path="/fitnessplanner" component={Fitnessplanner } />
   </Switch>
