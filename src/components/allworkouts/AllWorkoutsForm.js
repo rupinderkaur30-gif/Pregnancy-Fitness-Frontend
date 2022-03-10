@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { createWorkout } from '../../redux/actions/allWorkoutAction'
 
 class AllWorkoutsForm extends Component {
     constructor(props){
@@ -15,27 +17,31 @@ handleChange = e => {
 }
 
 handleSubmit = e => {
-  e.preventDeafault();
-  this.props.addWorkout({...this.state})
+  e.preventDefault();
+  this.props.createWorkout({...this.state, user_id: this.props.user.user?.id})
   this.setState({
-      Name: ""
+      name: ""
   })
 }
 
-
-
-     
 render(){
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Name
                 </label>
-                <input onChange={this.handleChange}type="text" name="Name"></input>
+                <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input>
                 <button type="submit">Add Workout</button>
             </form>
         )
 }
 }
 
-export default AllWorkoutsForm
+function mapStateToProps(state) {
+return {
+    user: state.userReducer
+}
+}
+
+
+export default connect(mapStateToProps, {createWorkout})(AllWorkoutsForm)

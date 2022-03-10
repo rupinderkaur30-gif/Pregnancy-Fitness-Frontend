@@ -8,4 +8,4 @@ class Workout extends React.Component {
     }
 }
 
-export default Workout
+export default  Workout

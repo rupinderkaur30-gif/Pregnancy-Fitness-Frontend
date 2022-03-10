@@ -10,10 +10,27 @@ function allWorkoutReducer(state = initialState, action){
        return {
            allWorkout: action.payload
          }
-   default:
-       return state;
+        
+    case "ADD_WORKOUT":
+        {
+         return{
+             allWorkout: [...state.allWorkout, action.payload]
+         }
+        }
 
+    case "ADD_EXERCISE": {
+
+        return{
+            allWorkout: [...state.allWorkout.map(
+                workout => workout.id === action.payload.workout_id ?
+                {...workout, exercises: [...workout.exercises, action.payload]} : workout
+            )]
+        }
     }
+
+         default:
+             return state;
+        }
 
 }
 

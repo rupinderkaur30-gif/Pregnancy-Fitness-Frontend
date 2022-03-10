@@ -8,12 +8,13 @@ function mealPlanReducer(state = initialState, action) {
     switch(action.type){
         case SET_MEALPLAN:
             return{
-                mealPlan: action.mealPlan
+                mealPlan: action.payload
 
             }
             default:
                 return state;
     }
+    
 
 }
 

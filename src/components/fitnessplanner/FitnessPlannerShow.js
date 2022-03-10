@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { fetchWorkout } from '../../redux/actions/allWorkoutAction'
+import { fetchFitnessPlanner } from '../../redux/actions/fitnessPlannerAction'
 import { connect } from 'react-redux'
 
 
 class FitnessPlannerShow extends Component {
 
     componentDidMount(){
-        this.props.dispatchFetchWorkout()
+        this.props.dispatchFetchFitnessPlanner()
     }
 
     render() {
@@ -14,15 +14,10 @@ class FitnessPlannerShow extends Component {
         const fitness = this.props.fitnessplanners.find(fitness => fitness.id === id)
         return(
             <div> 
-                <h1>Exercises</h1>
-                {workout && 
+                {fitness&& 
                 <ul>
-                  {workout.exercises.map(exercise => 
-                    <React.Fragment key={exercise.id}>
-                        <li>{exercise.name}</li>
-                        <iframe src={exercise.video_url}></iframe>
-                    </React.Fragment>
-                  )}
+                 <li>{fitness.name}</li>
+                 <li>{fitness.address}</li>
                 </ul>
     }
             </div>
@@ -32,14 +27,14 @@ class FitnessPlannerShow extends Component {
 
 function mapDispatchToProps(dispatch){
     return {
-            dispatchFetchWorkout: () => dispatch(fetchWorkout())
+            dispatchFetchFitnessPlanner: () => dispatch(fetchFitnessPlanner())
      }
  }
 
  function mapStateToProps(state){
      return{
-         allworkout: state.allWorkoutReducer.allWorkout
+         fitnessplanners: state.fitnessPlannerReducer.fitnessplanners
      }
  }
 
- export default connect(mapStateToProps, mapDispatchToProps)(WorkoutShow)
+ export default connect(mapStateToProps, mapDispatchToProps)(FitnessPlannerShow)
