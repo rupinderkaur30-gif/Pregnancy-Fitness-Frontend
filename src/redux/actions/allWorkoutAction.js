@@ -1,4 +1,4 @@
-import { ADD_WORKOUT, SET_ALLWORKOUT } from "./actiontypes"
+import { ADD_WORKOUT, SET_ALLWORKOUT, DELETE_WORKOUT } from "./actiontypes"
 
 export const fetchWorkout = () => {
     return (dispatch) => {
@@ -25,4 +25,13 @@ export const createWorkout = (formData) => {
             dispatch({type: ADD_WORKOUT, payload: data})
         })
     }
+}
+
+export const deleteWorkout = (id) => {
+    return dispatch => {
+        fetch(`http://localhost:3000/workouts/${id}`, {
+          method: "DELETE"
+        })
+        .then(data => dispatch({type: DELETE_WORKOUT, payload: data}))
+      }
 }

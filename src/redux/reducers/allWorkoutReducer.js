@@ -5,6 +5,7 @@ const initialState = {
 }
 
 function allWorkoutReducer(state = initialState, action){
+    let idx;
  switch (action.type){
    case "SET_ALLWORKOUT":
        return {
@@ -28,6 +29,17 @@ function allWorkoutReducer(state = initialState, action){
         }
     }
 
+        case "DELETE_WORKOUT": {
+            idx = state.allWorkout.findIndex(w => w.id === action.payload)
+            return{
+                allWorkout: [
+                    ...state.allWorkout.slice(0, idx),
+                    ...state.allWorkout.slice(idx + 1)
+                ]
+
+            }
+        }
+    
          default:
              return state;
         }
