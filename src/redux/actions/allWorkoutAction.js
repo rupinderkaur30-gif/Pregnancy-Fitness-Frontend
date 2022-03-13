@@ -32,6 +32,7 @@ export const deleteWorkout = (id) => {
         fetch(`http://localhost:3000/workouts/${id}`, {
           method: "DELETE"
         })
-        .then(data => dispatch({type: DELETE_WORKOUT, payload: data}))
+        .then(data => dispatch({type: DELETE_WORKOUT, payload: id}))
       }
 }
+

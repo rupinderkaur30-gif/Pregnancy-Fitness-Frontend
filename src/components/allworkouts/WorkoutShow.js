@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { fetchWorkout } from '../../redux/actions/allWorkoutAction'
 import { connect } from 'react-redux'
 import ExerciseForm from '../exercises/ExerciseForm'
+import {deleteExercise } from '../../redux/actions/exerciseAction'
 
 
 class WorkoutShow extends Component {
@@ -27,6 +28,7 @@ class WorkoutShow extends Component {
                         <li>{exercise.minute}</li>
                         <li>{exercise.equipment}</li>
                         <li>{exercise.targetareas}</li>
+                        <button onClick={() => this.props.dispatchDeleteExercise(exercise)}>Delete Exercise</button>
                         <br/>
                         <br/>
                         <br/>
@@ -41,7 +43,8 @@ class WorkoutShow extends Component {
 
 function mapDispatchToProps(dispatch){
     return {
-            dispatchFetchWorkout: () => dispatch(fetchWorkout())
+            dispatchFetchWorkout: () => dispatch(fetchWorkout()),
+            dispatchDeleteExercise: (exercise) =>  dispatch(deleteExercise(exercise))
      }
  }
 

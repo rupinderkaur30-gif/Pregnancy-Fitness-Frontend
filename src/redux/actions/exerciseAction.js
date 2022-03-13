@@ -1,4 +1,5 @@
 import { ADD_EXERCISE } from "./actiontypes"
+import { DELETE_EXERCISE } from "./actiontypes"
 
 export const createExercise = (formData) => {
     return (dispatch) => {
@@ -15,4 +16,13 @@ export const createExercise = (formData) => {
             dispatch({type: ADD_EXERCISE, payload: data})
         })
     }
+}
+
+export const deleteExercise = (exercise) => {
+    return dispatch => {
+        fetch(`http://localhost:3000/exercises/${exercise.id}`, {
+          method: "DELETE"
+        })
+        .then(data => dispatch({type: DELETE_EXERCISE, payload: exercise}))
+      }
 }

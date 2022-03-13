@@ -17,7 +17,7 @@ class FitnessPlannerShow extends Component {
                 {fitness&& 
                 <ul>
                  <li>{fitness.name}</li>
-                 <li>{fitness.address}</li>
+                 <li><a target="_blank" href={`https://maps.google.com?q=${fitness.address}`}>{fitness.address}</a></li>
                 </ul>
     }
             </div>

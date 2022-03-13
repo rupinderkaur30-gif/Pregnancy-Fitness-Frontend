@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { fetchMeal } from '../../redux/actions/mealPlanAction'
 import { connect } from 'react-redux'
+import Card from 'react-bootstrap/Card'
 
 
 class MealPlanShow extends Component {
@@ -19,15 +20,22 @@ class MealPlanShow extends Component {
                 <ul>
                     {meal.meals.map(meal => 
                     <React.Fragment key={meal.id}>
-                    <li>{meal.name}</li>
-                    <li><img src = {meal.image} /></li>
-                    <label>Nutrioius</label><li>{meal.description}</li>
+                        <Card style={{ width: '21rem' }}>
+                        <Card.Img variant="top" src={meal.image} />
+                        <Card.Body>
+                            <Card.Title>{meal.name}</Card.Title>
+                            <Card.Text>
+                            {meal.description}
+                            </Card.Text>
+                        </Card.Body>
+                        </Card>
                   
                     </React.Fragment>
                       )}
                 </ul>
     }
             </div>
+            
         )
     }
 }

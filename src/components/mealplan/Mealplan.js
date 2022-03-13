@@ -15,7 +15,7 @@ import Meal from './Meal'
             <div> 
                 <h1>All Meals</h1>
                 <ul>
-                   {this.props.mealPlan.map(m => <Meal k={m.id} {...m}/>)} 
+                   {this.props.mealPlan.map(m => <Meal key={m.id} {...m}/>)} 
                 </ul>
             </div>
         )
