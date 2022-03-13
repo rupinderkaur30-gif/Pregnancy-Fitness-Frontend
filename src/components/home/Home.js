@@ -6,6 +6,7 @@ const Home = () => {
     <>  
     <Button variant="success">Hello</Button>
         <h1>Home</h1>
+        
     </>
     )
 }

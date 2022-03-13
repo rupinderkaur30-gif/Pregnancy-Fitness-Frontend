@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { fetchMeal } from '../../redux/actions/mealPlanAction'
 import { connect } from 'react-redux'
 import Card from 'react-bootstrap/Card'
+import MealForm from '../meals/MealForm'
+
 
 
 class MealPlanShow extends Component {
@@ -11,11 +13,13 @@ class MealPlanShow extends Component {
     }
 
     render() {
+    
        const  id = parseInt(this.props.match.params.id)
         const meal = this.props.mealPlan.find(meal=> meal.id === id)
         return(
             <div> 
                 <h1>Meals</h1>
+                <MealForm />
                 {meal&& 
                 <ul>
                     {meal.meals.map(meal => 
@@ -25,9 +29,14 @@ class MealPlanShow extends Component {
                         <Card.Body>
                             <Card.Title>{meal.name}</Card.Title>
                             <Card.Text>
-                            {meal.description}
+                            {meal.ingredients}
                             </Card.Text>
+                            <Card.Text>
+                            {meal.instructions}
+                            </Card.Text>
+                            <Card.Title>{meal.prep_time}</Card.Title>
                         </Card.Body>
+                        <button onClick={() => this.props.dispatchDeleteMeal(meal)}>Delete Meal</button>
                         </Card>
                   
                     </React.Fragment>
