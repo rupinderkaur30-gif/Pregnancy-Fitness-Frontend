@@ -27,11 +27,11 @@ handleSubmit = e => {
 render(){
         return(
             <form onSubmit={this.handleSubmit}>
-                <label>
+                <label class="label">
                     Name
                 </label>
                 <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input>
-                <button type="submit">Add Workout</button>
+                <button class="button" type="submit">Add Workout</button>
             </form>
         )
 }

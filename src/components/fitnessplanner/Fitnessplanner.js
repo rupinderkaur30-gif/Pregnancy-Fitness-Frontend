@@ -30,7 +30,7 @@ class FitnessPlanner extends Component {
             <div>
             <h1>Fitness places</h1>
 
-            <label>Search</label>
+            <label className="search">Search</label>
             <input onChange={this.handleChange} type="text"></input>
             <ul>
             {filteredFitnessPlanners.map(f => <Fitness key={f.id} {...f}/>)}

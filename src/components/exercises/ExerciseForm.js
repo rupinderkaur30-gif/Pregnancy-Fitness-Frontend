@@ -49,7 +49,9 @@ render(){
                 <label>Minute</label><input onChange={this.handleChange} type="text" name="minute" value={this.state.minute}></input><br/>
                 <label>Equipment</label><input onChange={this.handleChange} type="text" name="equipment" value={this.state.equipment}></input><br/>
                 <label>Targetareas</label><input onChange={this.handleChange} type="text" name="targetareas" value={this.state.targetareas}></input><br/>
-                <button type="submit">Add Exercise</button>
+                <button class="button" type="submit">Add Exercise</button>
+
+
             </form>
         )
 }

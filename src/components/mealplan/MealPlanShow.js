@@ -3,6 +3,7 @@ import { fetchMeal } from '../../redux/actions/mealPlanAction'
 import { connect } from 'react-redux'
 import Card from 'react-bootstrap/Card'
 import MealForm from '../meals/MealForm'
+import {deleteMeal} from '../../redux/actions/mealAction'
 
 
 
@@ -19,7 +20,7 @@ class MealPlanShow extends Component {
         return(
             <div> 
                 <h1>Meals</h1>
-                <MealForm />
+                <MealForm mealplan_id={id}/>
                 {meal&& 
                 <ul>
                     {meal.meals.map(meal => 
@@ -51,11 +52,13 @@ class MealPlanShow extends Component {
 
 function mapDispatchToProps(dispatch){
     return {
-            dispatchFetchMeal: () => dispatch(fetchMeal())
+            dispatchFetchMeal: () => dispatch(fetchMeal()),
+            dispatchDeleteMeal: (meal) => dispatch(deleteMeal(meal))
      }
  }
 
  function mapStateToProps(state){
+     
      return{
          mealPlan: state.mealPlanReducer.mealPlan
      }

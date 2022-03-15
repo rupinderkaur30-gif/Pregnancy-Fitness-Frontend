@@ -10,12 +10,14 @@ const  Navbar = (props) => {
     
   }
     return <div className="header">
+  
     {props.loggedIn && <NavLink className='headerlink' to="/home">Home</NavLink>}
     {!props.loggedIn && <NavLink className='headerlink' to="/login">Log In</NavLink>}
     {props.loggedIn && <NavLink className='headerlink' to="/allworkouts">AllWorkouts</NavLink>}
-     {props.loggedIn && <NavLink className='headerlink' to="/mealplan">Mealplan</NavLink>}
-     {props.loggedIn && <NavLink className='headerlink' to="/fitnessplanner">Fitnessplanner</NavLink>}
+    {props.loggedIn && <NavLink className='headerlink' to="/mealplan">Mealplan</NavLink>}
+    {props.loggedIn && <NavLink className='headerlink' to="/fitnessplanner">Fitnessplanner</NavLink>}
     {props.loggedIn && <NavLink onClick={logout} className='headerlink' to="#">Log Out</NavLink>}
+ 
     </div>;
 }
 

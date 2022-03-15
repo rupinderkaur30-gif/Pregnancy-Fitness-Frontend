@@ -2,10 +2,89 @@
   text-align: center;
 }
 
+#form{
+  font-family: 'Grand Hotel', cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.search{
+  height: 30px;
+ 
+  outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+
+.form-container {
+  width: 50%;
+}
+/* 
+.card img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+} */
+
+.header{
+  padding: 20px;
+  border-bottom:  1px solid lightgrey;
+  text-align: right;
+  margin: 0;
+  background: rgb(38, 39, 38);
+  border-bottom: 1px solid #ccc;
+}
+
+p {
+ display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+img {
+  border: 1px solid #ddd;
+border-radius: 4px;
+padding: 5px;
+width: 600px;
+}
+
+  
+  /* Change the link color to #111 (black) on hover */
+  .button {
+    display: inline-block;
+    padding: 15px ;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  .button:hover {background-color: blue}
+
+.button:active {
+  background-color: blue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.label {
+  outline: black;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,7 +93,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: hsl(220, 13%, 18%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,6 +102,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;

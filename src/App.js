@@ -11,6 +11,7 @@ import Mealplan from './components/mealplan/Mealplan';
 import Fitnessplanner from './components/fitnessplanner/Fitnessplanner';
 import FitnessplannerShow from './components/fitnessplanner/FitnessPlannerShow';
 import MealPlanShow from './components/mealplan/MealPlanShow';
+import ExerciseShow from './components/exercises/ExerciseShow';
 import LogIn from './components/login/LogIn';
 import { checkLoggedIn } from './redux/actions/userAction';
 import { connect } from 'react-redux'
@@ -33,6 +34,7 @@ class App extends Component{
       <Route path="/fitnessplanner" component={Fitnessplanner } />
       <Route path="/fitnessplanners/:id" component={FitnessplannerShow } />
       <Route path="/meals/:id" component={MealPlanShow} />
+      <Route path="/exercises/:id" component={ExerciseShow} />
   </Switch>
   </div>
 );

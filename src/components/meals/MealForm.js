@@ -39,7 +39,7 @@ handleSubmit = e => {
 render(){
 
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form className="form" onSubmit={this.handleSubmit}>
                 <label>
                     Name
                 </label>
