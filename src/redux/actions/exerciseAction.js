@@ -25,6 +25,9 @@ export const deleteExercise = (exercise) => {
           method: "DELETE"
         })
         .then(data => dispatch({type: DELETE_EXERCISE, payload: exercise}))
+        .then(() => {
+            window.location = "/allworkouts"
+        })
       }
 }
 

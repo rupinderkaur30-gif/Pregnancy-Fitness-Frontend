@@ -14,7 +14,7 @@ import Workout from './Workout'
         return(
             <div> 
                 <h1>All Workouts</h1>
-                <AllWorkoutsForm />
+                <AllWorkoutsForm /><br/>
                 <ul>
                     {this.props.allworkout.map(w => <Workout key={w.id} {...w}/> )}
                 </ul>

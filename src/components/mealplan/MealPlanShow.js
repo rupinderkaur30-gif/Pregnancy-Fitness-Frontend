@@ -4,7 +4,9 @@ import { connect } from 'react-redux'
 import Card from 'react-bootstrap/Card'
 import MealForm from '../meals/MealForm'
 import {deleteMeal} from '../../redux/actions/mealAction'
-
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 
 
 class MealPlanShow extends Component {
@@ -21,10 +23,11 @@ class MealPlanShow extends Component {
             <div> 
                 <h1>Meals</h1>
                 <MealForm mealplan_id={id}/>
+                <Container>
                 {meal&& 
-                <ul>
+                <Row>
                     {meal.meals.map(meal => 
-                    <React.Fragment key={meal.id}>
+                    <Col key={meal.id} xs={4}>
                         <Card style={{ width: '21rem' }}>
                         <Card.Img variant="top" src={meal.image} />
                         <Card.Body>
@@ -40,10 +43,11 @@ class MealPlanShow extends Component {
                         <button onClick={() => this.props.dispatchDeleteMeal(meal)}>Delete Meal</button>
                         </Card>
                   
-                    </React.Fragment>
+                    </Col>
                       )}
-                </ul>
-    }
+                </Row>
+    }           
+             </Container>
             </div>
             
         )

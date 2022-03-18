@@ -23,10 +23,7 @@ class WorkoutShow extends Component {
                 <h1>Exercises</h1>
                {workout&& <ExerciseForm workout_id={workout.id}/>}
                <Container>
-                
-            
-                   
-                {workout && 
+                 {workout && 
         <Row>
                   {workout.exercises.map(exercise => 
                   <Col key={exercise.id} xs={4}>

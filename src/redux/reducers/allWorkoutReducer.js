@@ -47,6 +47,8 @@ function allWorkoutReducer(state = initialState, action){
         
     }
     
+
+        
          default:
              return state;
         }

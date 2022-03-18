@@ -1,5 +1,101 @@
 .App {
   text-align: center;
+  /* background-image: url("https://i0.wp.com/quoteamo.com/wp-content/uploads/2016/05/quote-about-mother-and-baby.png?fit=600%2C600"); */
+}
+
+.form-container {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.btn {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 42px; 
+   text-align: center;
+  width: 100%; 
+}
+
+.search {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 42px; 
+   text-align: center;
+  width: 20%; 
+}
+
+
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+
+.btn:active {
+  background-color: #06b;
 }
 
 #form{
@@ -24,13 +120,29 @@
 .form-container {
   width: 50%;
 }
-/* 
-.card img {
-  width: 350px;
-  height: 250px;
-  object-fit: cover;
+
+.bt {
+  background-image: url("https://thumbs.dreamstime.com/z/breakfast-lunch-dinner-healthy-eating-day-breakfast-lunch-dinner-day-menu-173160606.jpg");
+  color: #000000;
+  padding: 120px; 
+  margin-right: 8px;
+  margin-bottom: 10px;
+  font-family: Arial, Tahoma, Verdana, FreeSans, sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1em;
+  position: relative;
+  outline: none;
+  overflow: visible;
   cursor: pointer;
-} */
+  border-radius: 4px;
+  -moz-border-radius: 4px; 
+  -webkit-border-radius: 4px; 
+  box-shadow: 1px 1px 2px 0 #CCCCCC;
+  -moz-box-shadow: 1px 1px 2px 0 #CCCCCC;
+  -webkit-box-shadow: 1px 1px 2px 0 #CCCCCC;
+}
 
 .header{
   padding: 20px;
@@ -61,7 +173,7 @@ width: 600px;
   /* Change the link color to #111 (black) on hover */
   .button {
     display: inline-block;
-    padding: 15px ;
+    padding: 8px ;
     font-size: 15px;
     cursor: pointer;
     text-align: center;

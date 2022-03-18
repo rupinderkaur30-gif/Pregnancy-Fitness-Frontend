@@ -11,6 +11,13 @@ function exerciseReducer(state = initialState, action){
            allExercise: action.payload
          }
 
+         case "ADD_REVIEW":
+     
+            return{
+        allExercise: [...state.allExercise.map(exercise => exercise.id === action.payload.exercise_id ?
+                {...exercise, reviews: [...exercise.reviews, action.payload]} : exercise)]
+            }
+
          default:
              return state;
         }

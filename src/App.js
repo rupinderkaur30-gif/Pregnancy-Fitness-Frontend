@@ -15,6 +15,7 @@ import ExerciseShow from './components/exercises/ExerciseShow';
 import LogIn from './components/login/LogIn';
 import { checkLoggedIn } from './redux/actions/userAction';
 import { connect } from 'react-redux'
+import ReviewForm from './components/reviews/ReviewForm';
 
 class App extends Component{
   componentDidMount() {
@@ -35,6 +36,7 @@ class App extends Component{
       <Route path="/fitnessplanners/:id" component={FitnessplannerShow } />
       <Route path="/meals/:id" component={MealPlanShow} />
       <Route path="/exercises/:id" component={ExerciseShow} />
+      <Route path="/reviews/:id" component={ReviewForm} />
   </Switch>
   </div>
 );

@@ -39,12 +39,20 @@
         //      <button type="submit">Log In</button>
         //  </form>
           <div className='form-container'>
+            <div class="title">Welcome To Pregnancy Fitness App</div>
+             
             <Form  onSubmit={this.handleSubmit}>
                 <Form.Group >
-                <Form.Label>Username</Form.Label>
-                <Form.Control onChange={this.handleChange}type="text" name="username" placeholder="Enter username" />
+                <div class="input-container ic1">
+                <div class="cut"></div>
+                <Form.Label className='input'>Username</Form.Label>
+                <Form.Control className="input" onChange={this.handleChange}type="text" name="username" placeholder="Enter username" />
+                </div>
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <br/>
+                <br/>
+            
+                <Button class="submit" variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
