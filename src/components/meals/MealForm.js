@@ -40,15 +40,15 @@ render(){
 
         return(
             <form className="form" onSubmit={this.handleSubmit}>
-                <label>
+                <label className= "label">
                     Name
                 </label>
                 <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input><br/>
-                <label>Image</label><input onChange={this.handleChange} type="text" name="image" value={this.state.image}></input><br/>    
-                <label>Ingredients</label><input onChange={this.handleChange} type="text" name="ingredients" value={this.state.ingredients}></input><br/>
-                <label>Instructions</label><input onChange={this.handleChange} type="text" name="instructions" value={this.state.instructions}></input><br/>
-                <label>Prep_time</label><input onChange={this.handleChange} type="text" name="prep_time" value={this.state.prep_time}></input><br/>
-                <button type="submit">Add Meal</button>
+                <label className= "label">Image</label><input onChange={this.handleChange} type="text" name="image" value={this.state.image}></input><br/>    
+                <label className= "label">Ingredients</label><input onChange={this.handleChange} type="text" name="ingredients" value={this.state.ingredients}></input><br/>
+                <label className= "label">Instructions</label><input onChange={this.handleChange} type="text" name="instructions" value={this.state.instructions}></input><br/>
+                <label className= "label">Prep_time</label><input onChange={this.handleChange} type="text" name="prep_time" value={this.state.prep_time}></input><br/>
+                <button className="button" type="submit">Add Meal</button>
             </form>
         )
 }

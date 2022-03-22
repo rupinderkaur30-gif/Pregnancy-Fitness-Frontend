@@ -11,6 +11,7 @@ import Row from 'react-bootstrap/Row'
 
 class WorkoutShow extends Component {
 
+
     componentDidMount(){
         this.props.dispatchFetchWorkout()
     }
@@ -18,6 +19,7 @@ class WorkoutShow extends Component {
     render() {
        const  id = parseInt(this.props.match.params.id)
         const workout = this.props.allworkout.find(workout => workout.id === id)
+       
         return(
             <div> 
                 <h1>Exercises</h1>

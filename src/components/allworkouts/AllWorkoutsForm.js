@@ -30,7 +30,7 @@ render(){
                 <label class="label">
                     Name
                 </label>
-                <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input>
+                <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input><br/> 
                 <button class="button" type="submit">Add Workout</button>
             </form>
         )

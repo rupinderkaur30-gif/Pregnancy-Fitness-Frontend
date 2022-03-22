@@ -180,23 +180,25 @@ width: 600px;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: blue;
+    background-color: pink;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
   }
-  .button:hover {background-color: blue}
+  .button:hover {background-color: pink}
 
 .button:active {
-  background-color: blue;
+  background-color: pink;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 .label {
-  outline: black;
+  color: pink;
+  font-weight: bold;
+  display: block;
 }
-
+.label:after { content: ": " }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -215,9 +217,32 @@ width: 600px;
   color: white;
 }
 
+a {
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: pink;
+  color: black;
+  padding: 2px 6px 2px 6px;
+  border-radius: 12px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a:hover {
+  background-color: white;
+}
+
+a:active {
+  background-color: black;
+}
 
 .App-link {
-  color: #61dafb;
+  color: pink;
 }
 
 @keyframes App-logo-spin {

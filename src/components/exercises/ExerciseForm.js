@@ -39,16 +39,16 @@ handleSubmit = e => {
 
 render(){
         return(
-            <form onSubmit={this.handleSubmit}>
-                <label>
+            <form  onSubmit={this.handleSubmit}>
+                <label className= "label">
                     Name
                 </label>
                 <input onChange={this.handleChange} type="text" name="name" value={this.state.name}></input><br/>
-                <label>Video</label><input onChange={this.handleChange} type="text" name="video_url" value={this.state.video_url}></input><br/>    
-                <label>Description</label><input onChange={this.handleChange} type="text" name="description" value={this.state.description}></input><br/>
-                <label>Minute</label><input onChange={this.handleChange} type="text" name="minute" value={this.state.minute}></input><br/>
-                <label>Equipment</label><input onChange={this.handleChange} type="text" name="equipment" value={this.state.equipment}></input><br/>
-                <label>Targetareas</label><input onChange={this.handleChange} type="text" name="targetareas" value={this.state.targetareas}></input><br/>
+                <label className= "label" >Video</label><input onChange={this.handleChange} type="text" name="video_url" value={this.state.video_url}></input><br/>    
+                <label className= "label">Description</label><input onChange={this.handleChange} type="text" name="description" value={this.state.description}></input><br/>
+                <label className= "label">Minute</label><input onChange={this.handleChange} type="text" name="minute" value={this.state.minute}></input><br/>
+                <label className= "label">Equipment</label><input onChange={this.handleChange} type="text" name="equipment" value={this.state.equipment}></input><br/>
+                <label className= "label">Targetareas</label><input onChange={this.handleChange} type="text" name="targetareas" value={this.state.targetareas}></input><br/>
                 <button class="button" type="submit">Add Exercise</button>
 
 

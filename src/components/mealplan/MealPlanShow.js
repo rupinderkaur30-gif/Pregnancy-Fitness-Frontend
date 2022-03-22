@@ -22,7 +22,7 @@ class MealPlanShow extends Component {
         return(
             <div> 
                 <h1>Meals</h1>
-                <MealForm mealplan_id={id}/>
+                <MealForm mealplan_id={id}/><br/>
                 <Container>
                 {meal&& 
                 <Row>

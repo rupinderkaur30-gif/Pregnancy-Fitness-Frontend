@@ -5,7 +5,10 @@ import { connect } from 'react-redux'
 import Workout from './Workout'
 
 
+
+
  class AllWorkout extends Component {
+
 
     componentDidMount(){
         this.props.dispatchFetchWorkout()
@@ -16,11 +19,13 @@ import Workout from './Workout'
                 <h1>All Workouts</h1>
                 <AllWorkoutsForm /><br/>
                 <ul>
+
                     {this.props.allworkout.map(w => <Workout key={w.id} {...w}/> )}
                 </ul>
             </div>
         )
     }
+
 }
 
 function mapDispatchToProps(dispatch){

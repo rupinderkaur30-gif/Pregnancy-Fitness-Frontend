@@ -48,7 +48,7 @@ class ExerciseShow extends Component {
                       <button className="button" onClick={() => this.props.dispatchDeleteExercise(exercise)}>Delete Exercise</button><br/>
                       <br/>
                       <ReviewForm exercise_id={exercise.id}/>
-                      </Card>
+                      </Card><br/>
                       {exercise.reviews.map(review => 
                         <React.Fragment key={review.id}><li>{review.content} By {review.username}</li></React.Fragment>)}
                         </Col>
